@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Message</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/message">Leave a Message</a>
+    </nav>
+
+    <section id="message">
+        <h1>Leave a Message</h1>
+        <form action="/message" method="POST">
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <br>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>:-)!</p>
+    </footer>
+</body>
+</html>
+

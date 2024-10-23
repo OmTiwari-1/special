@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/message">Leave a Message</a>
+    </nav>
+
+    <section id="gallery">
+        <h1>Gallery</h1>
+        <div class="gallery-grid">
+            <img src="{{ url_for('static', filename='image2.jpg') }}" alt="Image 2">
+            <img src="{{ url_for('static', filename='image1.jpg') }}" alt="Image 1">
+        </div>
+    </section>
+
+    <footer>
+        <p>Thank you for visiting!</p>
+    </footer>
+</body>
+</html>
+

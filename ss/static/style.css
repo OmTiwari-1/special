@@ -1,0 +1,124 @@
+:root {
+    --background-color: white;
+    --text-color: black;
+    --link-color: #ff6347; /* Tomato color */
+    --input-background: #f1f1f1;
+    --input-text-color: black;
+    --button-color: #ff6347;
+    --overlay-bg: rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: black;
+        --text-color: white;
+        --link-color: #87ceeb; /* Light Sky Blue for dark theme */
+        --input-background: #333;
+        --input-text-color: white;
+        --button-color: #87ceeb;
+        --overlay-bg: rgba(255, 255, 255, 0.3);
+    }
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: var(--background-color);
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    background-color: var(--input-background);
+    color: var(--input-text-color);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    background-color: var(--button-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e6735f;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Gallery styles */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 15px;
+    padding: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+/* Apply background image to the message section */
+#message-section {
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    padding: 20px;
+    color: #fff; /* Change text color for better contrast */
+}
+
+/* Adjust form styling for better readability on background */
+#message-form {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for the form */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, textarea {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
